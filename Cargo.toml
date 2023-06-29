@@ -1,0 +1,21 @@
+[package]
+name = "multi_stream"
+version = "0.1.0"
+edition = "2021"
+description = "Aggregate multiple streams of different types in a single stream with an item type that is a tuple of the incoming stream items."
+repository = "https://github.com/andrewlowndes/multi_stream"
+license = "MIT OR Apache-2.0"
+keywords = ["stream", "aggregate", "macro"]
+categories = ["asynchronous", "rust-patterns"]
+
+[lib]
+
+[dependencies]
+futures = "0.3.27"
+paste = "1.0.12"
+pin-project = "1.0.12"
+
+[dev-dependencies]
+async-stream = "0.3.4"
+tokio = { version = "1.26.0", features = ["full", "rt-multi-thread"] }
+rand = "0.8.5"
